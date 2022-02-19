@@ -255,7 +255,8 @@
                 <div class="col">
                     <div class="bbb_main_container">
                         <div class="bbb_viewed_title_container ">
-                            <h3 class="bbb_viewed_title">Best selling products</h3>
+                            <a href="{{url('allCosmatics')}}"><h3 class="mr-20 opacity-50" style="float: right">View All</h3></a>
+                            <h3 class="bbb_viewed_title">Best selling cosmetics </h3>
                             <div class="bbb_viewed_nav_container">
                                 <div class="bbb_viewed_nav bbb_viewed_prev"><i class="fas fa-chevron-left"></i></div>
                                 <div class="bbb_viewed_nav bbb_viewed_next"><i class="fas fa-chevron-right"></i></div>
@@ -265,10 +266,10 @@
                             <div class="owl-carousel owl-theme bbb_viewed_slider ">
 
 
-                                @foreach ($products as $product)
+                                @foreach ($cosmetics as $product)
                                     <div class="w-full max-w-sm mx-auto overflow-hidden rounded-md shadow-md"style="background: #faf9f9">
                                         <a href="{{url("productDetail/$product->id") }}">
-                                            <img src="/image/{{ $product->image }}" alt="" class="w-full max-h-60">
+                                            <img src="/image/cosmetic/{{ $product->image }}" alt="" class="w-full max-h-60">
                                         </a>
                                         <div class="flex items-end justify-end w-full bg-cover">
 

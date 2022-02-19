@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Cosmetic;
 use App\Models\Product;
 use Illuminate\View\Component;
 
@@ -24,7 +25,7 @@ class slider extends Component
      */
     public function render()
     {
-        $products=Product::all();
-        return view('components.slider',compact('products'));
+        $cosmetics=Cosmetic::all();
+        return view('components.slider',compact('cosmetics'));
     }
 }

@@ -42,7 +42,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>price:</strong>
-                    <input type="text" name="price" class="form-control" placeholder="image">
+                    <input type="text" name="price" class="form-control" placeholder="price">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

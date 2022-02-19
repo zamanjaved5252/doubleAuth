@@ -1,7 +1,7 @@
 @extends('admin.adminpanel')
 
 @section('content')
-    <div class="row">
+    <div class="row mt-2 mb-2">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
                 <h2>
@@ -20,7 +20,7 @@
         </div>
     @endif
 
-    <table class="table table-bordered example"  style="">
+    <table class="table table-bordered example mt-2 mb-2"  style="">
         <thead>
         <tr>
             <th>No</th>
@@ -30,8 +30,9 @@
             <th width="280px">Action</th>
         </tr>
         </thead>
+        <tbody>
         @foreach ($products as $product)
-            <tbody>
+
             <tr>
                 <td></td>
                 <td><img src="/image/{{ $product->image }}" width="100px"></td>

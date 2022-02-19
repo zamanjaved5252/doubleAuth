@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cosmetic;
 use App\Models\Product1;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,6 @@ class Product1Controller extends Controller
     public function index()
     {
         $products1 = Product1::latest()->paginate();
-
         return view('admin.products1.index',compact('products1'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -132,5 +132,10 @@ class Product1Controller extends Controller
 //
 //        return redirect()->route('cosmatics.index')
 //            ->with('success','Product deleted successfully');
+    }
+    public function all()
+    {
+        $products1=Product1::all();
+        return view('allProductsPages.allProducts1Pages',compact('products1'));
     }
 }

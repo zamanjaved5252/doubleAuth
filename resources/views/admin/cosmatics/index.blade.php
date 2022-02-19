@@ -1,6 +1,6 @@
 @extends('admin.adminpanel')
-
 @section('content')
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
@@ -20,7 +20,7 @@
         </div>
     @endif
 
-    <table class="table table-bordered example">
+    <table class="table table-bordered " id="example">
         <thead>
         <tr>
             <th>No</th>
@@ -33,7 +33,7 @@
         @foreach ($cosmetics as $cosmetic)
             <tbody>
             <tr>
-                <td></td>
+                <td>{{ ++$i }}</td>
                 <td><img src="/image/cosmetic/{{ $cosmetic->image }}" width="100px"></td>
                 <td>{{ $cosmetic->name }}</td>
                 <td>{{ $cosmetic->description }}</td>
@@ -63,4 +63,11 @@
 {{--            $('#example').DataTable();--}}
 {{--        } );--}}
 {{--    </script>--}}
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+    </script>
 @endsection

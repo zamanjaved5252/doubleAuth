@@ -45,199 +45,188 @@
         </button>
     </div>
     </div>
-    {{--endslide--}}
+{{--hover--}}
+    <style>
+        /* Icon set - http://ionicons.com */
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
+        @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
-    <!--cart-->
-{{--    <style>--}}
-{{--        /* Icon set - http://ionicons.com */--}}
-{{--        @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);--}}
-{{--        @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);--}}
+        .snip1268 {
+            font-family: 'Raleway', Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+            margin: 10px;
+            min-width: 220px;
+            max-width: 210px;
+            width: 100%;
+            color: #333333;
+            text-align: center;
+            background-color: #ffffff;
+            line-height: 1.6em;
+        }
 
-{{--        .snip1268 {--}}
-{{--            font-family: 'Raleway', Arial, sans-serif;--}}
-{{--            position: relative;--}}
-{{--            overflow: hidden;--}}
-{{--            margin: 10px;--}}
-{{--            min-width: 220px;--}}
-{{--            max-width: 310px;--}}
-{{--            width: 100%;--}}
-{{--            color: #333333;--}}
-{{--            text-align: center;--}}
-{{--            background-color: #ffffff;--}}
-{{--            line-height: 1.6em;--}}
-{{--        }--}}
+        .snip1268 * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: all 0.6s ease;
+            transition: all 0.6s ease;
+        }
 
-{{--        .snip1268 * {--}}
-{{--            -webkit-box-sizing: border-box;--}}
-{{--            box-sizing: border-box;--}}
-{{--            -webkit-transition: all 0.6s ease;--}}
-{{--            transition: all 0.6s ease;--}}
-{{--        }--}}
+        .snip1268 .image {
+            position: relative;
+        }
 
-{{--        .snip1268 .image {--}}
-{{--            position: relative;--}}
-{{--        }--}}
+        .snip1268 img {
+            max-width: 100%;
+            vertical-align: top;
+            -webkit-transition: opacity 0.35s;
+            transition: opacity 0.35s;
+        }
 
-{{--        .snip1268 img {--}}
-{{--            max-width: 100%;--}}
-{{--            vertical-align: top;--}}
-{{--            -webkit-transition: opacity 0.35s;--}}
-{{--            transition: opacity 0.35s;--}}
-{{--        }--}}
+        .snip1268 .icons,
+        .snip1268 .add-to-cart {
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            opacity: 0;
+        }
 
-{{--        .snip1268 .icons,--}}
-{{--        .snip1268 .add-to-cart {--}}
-{{--            position: absolute;--}}
-{{--            left: 45px;--}}
-{{--            right: 20px;--}}
-{{--            opacity: 0;--}}
-{{--        }--}}
+        .snip1268 .icons {
+            -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+            top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
 
-{{--        .snip1268 .icons {--}}
-{{--            -webkit-transform: translateY(-100%);--}}
-{{--            transform: translateY(-100%);--}}
-{{--            top: 20px;--}}
-{{--            display: flex;--}}
-{{--            justify-content: space-between;--}}
-{{--        }--}}
+        .snip1268 .icons a {
+            width: 32.5%;
+            background: #ffffff;
+        }
 
-{{--        .snip1268 .icons a {--}}
-{{--            width: 32.5%;--}}
-{{--            background: #ffffff;--}}
-{{--        }--}}
+        .snip1268 .icons a:hover {
+            background: #000000;
+        }
 
-{{--        .snip1268 .icons a:hover {--}}
-{{--            background: #000000;--}}
-{{--        }--}}
+        .snip1268 .icons a:hover i {
+            color: #ffffff;
+            opacity: 1;
+        }
 
-{{--        .snip1268 .icons a:hover i {--}}
-{{--            color: #ffffff;--}}
-{{--            opacity: 1;--}}
-{{--        }--}}
+        .snip1268 .icons i {
+            line-height: 46px;
+            font-size: 20px;
+            color: #000000;
+            text-align: center;
+            opacity: 0.7;
+            margin: 0;
+        }
 
-{{--        .snip1268 .icons i {--}}
-{{--            line-height: 46px;--}}
-{{--            font-size: 20px;--}}
-{{--            color: #000000;--}}
-{{--            text-align: center;--}}
-{{--            opacity: 0.7;--}}
-{{--            margin: 0;--}}
-{{--        }--}}
+        .snip1268 .add-to-cart {
+            position: absolute;
+            bottom: 20px;
+            -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+            font-size: 0.8em;
+            color: #000000;
+            line-height: 46px;
+            letter-spacing: 1.5px;
+            background-color: #ffffff;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
 
-{{--        .snip1268 .add-to-cart {--}}
-{{--            position: absolute;--}}
-{{--            bottom: 30px;--}}
-{{--            -webkit-transform: translateY(100%);--}}
-{{--            transform: translateY(100%);--}}
-{{--            font-size: 0.8em;--}}
-{{--            color: #000000;--}}
-{{--            width: 130px;--}}
+        .snip1268 .add-to-cart:hover {
+            background: #000000;
+            color: #ffffff;
+        }
 
-{{--            line-height: 36px;--}}
-{{--            letter-spacing: px;--}}
-{{--            background-color: #ffffff;--}}
-{{--            font-weight: 500;--}}
-{{--            text-decoration: none;--}}
-{{--            text-transform: uppercase;--}}
-{{--        }--}}
+        .snip1268 figcaption {
+            padding: 20px 20px 30px;
+        }
 
-{{--        .snip1268 .add-to-cart:hover {--}}
-{{--            background: #f60257;--}}
-{{--            color: #ffffff;--}}
-{{--        }--}}
+        .snip1268 h2,
+        .snip1268 p {
+            margin: 0;
+            text-align: left;
+        }
 
-{{--        .snip1268 figcaption {--}}
-{{--            /*padding: ;*/--}}
-{{--        }--}}
+        .snip1268 h2 {
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
 
-{{--        .snip1268 h2,--}}
-{{--        .snip1268 p {--}}
-{{--            margin: 0;--}}
-{{--            text-align: left;--}}
-{{--        }--}}
+        .snip1268 p {
+            margin-bottom: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
 
-{{--        .snip1268 h2 {--}}
-{{--            margin-bottom: 0px;--}}
-{{--            font-weight: 700;--}}
-{{--        }--}}
+        .snip1268 .price {
+            font-size: 1.3em;
+            opacity: 0.5;
+            font-weight: 700;
+            text-align: right;
+        }
 
-{{--        .snip1268 p {--}}
-{{--            margin-bottom: 15px;--}}
-{{--            font-size: 0.85em;--}}
-{{--            font-weight: 500;--}}
-{{--        }--}}
+        .snip1268:hover img,
+        .snip1268.hover img {
+            opacity: 0.8;
+        }
 
-{{--        .snip1268 .price {--}}
-{{--            font-size: 1.3em;--}}
-{{--            opacity: 0.5;--}}
-{{--            font-weight: 700;--}}
-{{--            text-align: right;--}}
-{{--        }--}}
+        .snip1268:hover .icons,
+        .snip1268.hover .icons,
+        .snip1268:hover .add-to-cart,
+        .snip1268.hover .add-to-cart {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+        }
 
-{{--        .snip1268:hover img,--}}
-{{--        .snip1268.hover img {--}}
-{{--            opacity: 0.8;--}}
-{{--        }--}}
+    </style>
+    <div class="container">
+        <div class="row ml-2">
+            @foreach ($products1 as $product)
+                <figure class="snip1268">
+                    <div class="image">
+                        <a href="{{url("productDetail/$product->id") }}">
 
-{{--        .snip1268:hover .icons,--}}
-{{--        .snip1268.hover .icons,--}}
-{{--        .snip1268:hover .add-to-cart,--}}
-{{--        .snip1268.hover .add-to-cart {--}}
-{{--            -webkit-transform: translateY(0);--}}
-{{--            transform: translateY(0);--}}
-{{--            opacity: 1;--}}
-{{--        }--}}
+                            <img src="/image/products1/{{ $product->image }}" alt="sq-sample4"/>
+                        </a>
 
-{{--    </style>--}}
-{{--    <div class="container px-6 mx-auto mt-24 mb-8">--}}
-{{--        <h3 class="text-2xl font-medium text-gray-700">Product List</h3>--}}
-{{--        <div class="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">--}}
-{{--            @foreach ($products as $product)--}}
-{{--                <figure class="snip1268 mt-4" style="width: 16.5vw;background: whitesmoke;">--}}
-{{--                    <div class="image">--}}
-{{--                        <a href="{{url("productDetail/$product->id") }}">--}}
-{{--                            <img src="/image/{{ $product->image }} " alt="sq-sample4"/></a>--}}
-{{--                        <i class="fa fa-facebook-f fa-lg "></i>--}}
-{{--                        <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">--}}
-{{--                            @csrf--}}
-{{--                            <input type="hidden" value="{{ $product->id }}" name="id">--}}
-{{--                            <input type="hidden" value="{{ $product->name }}" name="name">--}}
-{{--                            <input type="hidden" value="{{ $product->price }}" name="price">--}}
-{{--                            <input type="hidden" value="{{ $product->image }}" name="image">--}}
-{{--                            <input type="hidden" value="1" name="quantity">--}}
-{{--                            <button href="#" class="add-to-cart rounded-lg ">Add to Cart</button>--}}
-{{--                        </form>--}}
+                        <form class="add-to-cart" action="{{ route('cart.store') }}" method="POST"
+                              enctype="multipart/form-data">
+                            @csrf
+                            <input type="hidden" value="{{ $product->id }}" name="id">
+                            <input type="hidden" value="{{ $product->name }}" name="name">
+                            <input type="hidden" value="{{ $product->price }}" name="price">
+                            <input type="hidden" value="{{ $product->image }}" name="image">
+                            <input type="hidden" value="1" name="quantity">
+                            <button class="add-to-cart">Add To Cart</button>
+                        </form>
 
-{{--                    </div>--}}
-{{--                    <figcaption>--}}
-{{--                        <h2>{{ $product->name }}</h2>--}}
-{{--                        <div class="price">{{ $product->price}}</div>--}}
-{{--                        <br>--}}
-{{--                    </figcaption>--}}
-{{--                </figure>--}}
-{{--            @endforeach--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--    <script>--}}
-{{--        /* Demo purposes only */--}}
-{{--        $(".hover").mouseleave(--}}
-{{--            function () {--}}
-{{--                $(this).removeClass("hover");--}}
-{{--            }--}}
-{{--        );--}}
-{{--    </script>--}}
-<!---->
-
+                    </div>
+                    <figcaption>
+                        <h2>{{ $product->name }}</h2>
+                        {{--    <p>My family is dysfunctional and my parents won't empower me. Consequently I'm not self actualized.</p>--}}
+                        <div class="price">{{ $product->price }}</div>
+                    </figcaption>
+                </figure>
+            @endforeach
+        </div>
+    </div>
+{{--    --}}
     <div class="container px-6 mx-auto mt-4 mb-8">
         <h3 class="text-2xl font-medium text-gray-700">Product List</h3>
+        <a href="{{url('allProducts')}}"><h2 style="float: right" class="opacity-50">View All</h2></a>
         <div class="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             @foreach ($products->take(4) as $product)
-                <div class="w-full max-w-sm mx-auto overflow-hidden rounded-md shadow-md">
+                <div class="w-full max-w-sm mx-auto overflow-hidden rounded-md shadow-md"style="width:80%;>
                     <a href="{{url("productDetail/$product->id") }}">
                         <img src="/image/{{ $product->image }}" alt="" class="w-full max-h-50">
                     </a>
                     <div class="flex items-end justify-end w-full bg-cover">
-
                     </div>
                     <div class="px-5 py-3">
                         <h3 class="text-gray-700 uppercase">{{ $product->name }}</h3>
@@ -269,8 +258,36 @@
 
 
 
-    {{--slide2--}}
-    <style></style>
+    {{--slide--}}
+    <div class="container px-6 mx-auto mt-4 mb-8">
+        <h3 class="text-2xl font-medium text-gray-700">Product List</h3>
+        <a href="{{url('allProducts1')}}"><h2 style="float: right" class="opacity-50">View All</h2></a>
+        <div class="grid grid-cols-1 gap-6 mt-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            @foreach ($products1->take(4) as $product)
+                <div class="w-full max-w-sm mx-auto overflow-hidden rounded-md shadow-md"style="width:80%;>
+                    <a href="{{url("productDetail/$product->id") }}">
+                        <img src="/image/products1/{{ $product->image }}" alt="" class="w-full max-h-50">
+                    </a>
+                    <div class="flex items-end justify-end w-full bg-cover">
 
+                    </div>
+                    <div class="px-5 py-3">
+                        <h3 class="text-gray-700 uppercase">{{ $product->name }}</h3>
+                        <span class="mt-2 text-gray-500">${{ $product->price }}</span>
+                        <form action="{{ route('cart.store') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <input type="hidden" value="{{ $product->id }}" name="id">
+                            <input type="hidden" value="{{ $product->name }}" name="name">
+                            <input type="hidden" value="{{ $product->price }}" name="price">
+                            <input type="hidden" value="{{ $product->image }}" name="image">
+                            <input type="hidden" value="1" name="quantity">
+                            <button class="px-4 py-2 text-white bg-blue-800 rounded">Add To Cart</button>
+                        </form>
+                    </div>
+
+                </div>
+            @endforeach
+        </div>
+    </div>
     {{--endslide2--}}
 @endsection

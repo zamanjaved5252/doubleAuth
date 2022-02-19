@@ -34,15 +34,15 @@
             <tbody>
             <tr>
                 <td></td>
-                <td><img src="/image/cosmetic/{{ $product->image }}" width="100px"></td>
+                <td><img src="/image/products1/{{ $product->image }}" width="100px"></td>
                 <td>{{ $product->name }}</td>
                 <td>{{ $product->description }}</td>
                 <td>
-                    <form action="{{ route('$product.destroy',$product->id) }}" method="POST">
+                    <form action="{{ route('products1.destroy',$product->id) }}" method="POST">
 
-                        <a class="btn btn-info" href="{{ route('$product.show',$product->id) }}">Show</a>
+                        <a class="btn btn-info" href="{{ route('products1.show',$product->id) }}">Show</a>
 
-                        <a class="btn btn-primary" href="{{ route('$product.edit',$product->id) }}">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('products1.edit',$product->id) }}">Edit</a>
 
                         @csrf
                         @method('DELETE')

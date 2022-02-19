@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('panel', function () {
     return view('admin.adminpanel');
 });
-Route::get('dashboard', function () {
+Route::get('dashboard1', function () {
     return view('admin.dashboard');
 });
 
@@ -26,7 +26,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 
-//Route::get('AdminPanel',[\App\Http\Controllers\HomeController::class,'index']);
+Route::get('home',[\App\Http\Controllers\HomeController::class,'index']);
 
 
 Route::resource('products', \App\Http\Controllers\ProductController::class);
@@ -35,7 +35,13 @@ Route::resource('contacts', \App\Http\Controllers\ContactController::class);
 Route::resource('cosmatics', \App\Http\Controllers\CosmeticController::class);
 Route::resource('products1', \App\Http\Controllers\Product1Controller::class);
 
+
+//allProducts
+Route::get('allProducts', [\App\Http\Controllers\ProductController::class, 'all']);
+Route::get('allCosmatics', [\App\Http\Controllers\CosmeticController::class, 'all']);
+Route::get('allProducts1', [\App\Http\Controllers\Product1Controller::class, 'all']);
 //
+
 
 
 
@@ -49,8 +55,11 @@ Route::get('about', function () {
     return view('content.about');
 });
 
-Route::get('checkout', function () {
-    return view('content.checkout');
+//Route::get('checkout', function () {
+//    return view('content.checkout');
+//});
+Route::get('contactUS', function () {
+    return view('content.contact_us');
 });
 
 
@@ -62,9 +71,11 @@ Route::post('cart', [\App\Http\Controllers\CartController::class, 'addToCart'])-
 Route::post('update-cart', [\App\Http\Controllers\CartController::class, 'updateCart'])->name('cart.update');
 Route::post('remove', [\App\Http\Controllers\CartController::class, 'removeCart'])->name('cart.remove');
 Route::post('clear', [\App\Http\Controllers\CartController::class, 'clearAllCart'])->name('cart.clear');
+Route::get('checkout', [\App\Http\Controllers\CartController::class, 'checkout']);
+Route::post('checkoutstore', [\App\Http\Controllers\CartController::class, 'checkoutstore'])->name('checkoutstore');
 //
 Route::get('productDetail/{id}', [\App\Http\Controllers\CartController::class, 'productDetail'])->name('productDetail');
-Route::get('checkout', [\App\Http\Controllers\CartController::class,'checkout']);
+//Route::get('checkout', [\App\Http\Controllers\CartController::class,'checkout']);
 
 
 
